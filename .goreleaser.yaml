@@ -1,8 +1,20 @@
 version: 2
 builds:
   - main: ./cmd/protoc-gen-py
-    id: protoc-gen-py
+    id: py
     binary: protoc-gen-py
+    env:
+      - CGO_ENABLED=0
+    targets:
+      - linux_amd64
+      - linux_arm64
+      - darwin_amd64
+      - darwin_arm64
+      - windows_amd64
+      - windows_arm64
+  - main: ./cmd/protoc-gen-grpc-py
+    id: grpc-py
+    binary: protoc-gen-grpc-py
     env:
       - CGO_ENABLED=0
     targets:

@@ -20,7 +20,7 @@ import (
 	"github.com/wasilibs/go-protoc-gen-py/internal/wasm"
 )
 
-func Run(_ string, cmdArgs []string, stdin io.Reader, stdout io.Writer, _ io.Writer, cwd string) int {
+func Run(cmd string, cmdArgs []string, stdin io.Reader, stdout io.Writer, _ io.Writer, cwd string) int {
 	ctx := context.Background()
 
 	rtCfg := wazero.NewRuntimeConfig()
@@ -40,7 +40,7 @@ func Run(_ string, cmdArgs []string, stdin io.Reader, stdout io.Writer, _ io.Wri
 
 	wasi_snapshot_preview1.MustInstantiate(ctx, rt)
 
-	args := append([]string{"python", ".venv/bin/protoc-gen-py"}, cmdArgs...)
+	args := append([]string{"python", ".venv/bin/" + cmd}, cmdArgs...)
 
 	libDir, _ := fs.Sub(site, "lib")
 	venvDir, _ := fs.Sub(site, ".venv")

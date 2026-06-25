@@ -24,6 +24,7 @@ func TestBuf(t *testing.T) {
 
 	for _, path := range []string{
 		filepath.Join("out", "buf", "py", "helloworld_pb.py"),
+		filepath.Join("out", "buf", "py", "helloworld_pb_grpc.py"),
 	} {
 		if _, err := os.Stat(path); err != nil {
 			t.Errorf("failed to stat %v: %v", path, err)
