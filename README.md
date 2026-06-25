@@ -24,6 +24,6 @@ To avoid installation entirely, it can be convenient to use `go run`
 $ go run github.com/wasilibs/go-protoc-gen-py/cmd/protoc-gen-py@latest .
 ```
 
-[1]: https://github.com/bufbuild/protoc-gen-py
+[1]: https://github.com/bufbuild/protobuf-py
 [2]: https://wazero.io/
 [3]: https://github.com/brettcannon/cpython-wasi-build
