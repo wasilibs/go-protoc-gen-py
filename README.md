@@ -6,6 +6,9 @@ executing with the pure Go Wasm runtime [wazero][2]. This means that `go install
 can be used to execute it, with no need to rely on separate package managers such as pnpm,
 on any platform that Go supports.
 
+This module packages both [`protoc-gen-py`](https://pypi.org/project/protoc-gen-py/) and
+[`protoc-gen-grpc-py`](https://pypi.org/project/protoc-gen-grpc-py/).
+
 ## Installation
 
 Precompiled binaries are available in the [releases](https://github.com/wasilibs/go-protoc-gen-py/releases).
