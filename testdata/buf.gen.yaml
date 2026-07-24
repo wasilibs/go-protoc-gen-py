@@ -3,6 +3,3 @@ plugins:
   - plugin: py
     out: ../out/buf/py
     path: ["go", "run", "../cmd/protoc-gen-py"]
-  - plugin: grpc-py
-    out: ../out/buf/py
-    path: ["go", "run", "../cmd/protoc-gen-grpc-py"]
