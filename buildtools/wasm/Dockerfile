@@ -13,7 +13,7 @@ RUN unzip python-3.14.6-wasi_sdk-24.zip
 RUN rm -r .venv/bin/python*
 RUN rm -r .venv/lib64
 RUN rm -r .venv/lib/python3.14/site-packages/protobuf_ext/
-RUN rm -r .venv/lib/python3.14/site-packages/protobuf_py_ext-0.1.1.dist-info/
+RUN rm -r .venv/lib/python3.14/site-packages/protobuf_py_ext-*.dist-info/
 RUN zip -r pysite.zip.wasm .venv lib
 
 CMD ["cp", "-R", "python.wasm", "pysite.zip.wasm", "/out/"]
