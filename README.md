@@ -3,7 +3,7 @@
 go-protoc-gen-py is a distribution of [protoc-gen-py][1], that can be built with Go. It does not actually reimplement any
 functionality of protoc-gen-py in Go, instead packaging it with the WASI build of [Python][3], and
 executing with the pure Go Wasm runtime [wazero][2]. This means that `go install` or `go run`
-can be used to execute it, with no need to rely on separate package managers such as pnpm,
+can be used to execute it, with no need to rely on separate package managers such as uv,
 on any platform that Go supports.
 
 ## Installation
